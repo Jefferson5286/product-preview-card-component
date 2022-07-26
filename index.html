@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+
+  <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">  
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz@9..144&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+
+  <title>Frontend Mentor | Product preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    body {
+      background-color: hsl(30, 38%, 92%);
+      font-size: 14px;
+      padding: 0;
+      margin: 0;
+    }
+
+    main {
+      display: flex;
+      flex-direction: row;
+      height: 420px;
+      width: 520px;
+      margin: 100px auto;
+      border-radius: 10px;
+      background-color: white;
+    }
+
+    p, del {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      color: hsl(228, 12%, 48%);
+    }
+
+    button {
+      background-color: hsl(158, 36%, 37%);
+      border-radius: 8px;
+      margin-top: 5%;
+      height: 35px;
+      width: 189px;
+      border: 0;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      color:hsl(30, 38%, 92%);
+    }
+
+    h1 {
+      color: hsl(212, 21%, 14%);
+      font-family: 'Fraunces', serif;
+    }
+
+    #container-button {
+      width: 200px;
+      margin-top: 5%;
+      text-align: center;
+    }
+
+    #money-values {display: flex;}
+    #info {padding: 20px;}
+    #old-value {margin-left: 15px}
+
+    #img {
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+    }
+
+    #new-value {
+      font-size: 33px;
+      font-family: 'Fraunces', serif;
+      margin: 0;
+      color:hsl(158, 36%, 37%);
+    }
+
+    #cart-icon {
+      position: relative;
+      top: 12%;
+      color:hsl(30, 38%, 92%);
+    }
+
+    footer a {color: hsl(228, 45%, 44%);}
+    footer {
+      font-size: 11px;
+      text-align: center;
+    }
+
+  </style>
+</head>
+<body>
+  <main>
+    <img src="images/image-product-desktop.jpg" id="img" alt="icon-cart">
+    <div id="info">
+      <p>P E R F U M E</p>
+
+      <h1>Gabrielle Essence Eau De Parfum</h1>
+
+      <p>
+        A floral, solar and voluptuous interpretation composed
+        by Olivier Polge, Perfumer-Creator for the House of CHANEL.
+      </p>
+
+      <div id="money-values">
+        <p id="new-value">$149.99</p>
+        <del><p id="old-value">$169.99</p></del>
+      </div>
+
+      <div id="container-button">
+        <button type="submit">
+          <img id="cart-icon" src="images/icon-cart.svg" alt="icon"> Add to Cart
+        </button>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/Jefferson5286">Jefferson Lima</a>.
+  </footer>
+
+  <script>
+    const button = document.querySelector('button')
+
+    button.addEventListener('mousedown', () => {
+      button.style.backgroundColor = 'hsl(158, 44%, 23%)'
+    })
+
+    button.addEventListener('mouseup', () => {
+      // sleep(1)
+      button.style.backgroundColor = 'hsl(158, 36%, 37%)'
+    })
+
+    button.addEventListener('mouseover', () => {
+      button.style.backgroundColor = 'hsl(153,36%,54%)'
+    })
+
+    button.addEventListener('mouseout', () => {
+      button.style.backgroundColor = 'hsl(158, 36%, 37%)'
+    })
+  </script>
+</body>
+</html>
